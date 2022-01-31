@@ -13,3 +13,10 @@ body {
 
   background-color: var(--col-lightgrey-bg);
 }
+.conatiner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page {
+  padding-top: 100px;
+}
