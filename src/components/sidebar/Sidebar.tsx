@@ -4,6 +4,7 @@ export const Sidebar = () => {
   return (
     <aside className="sidebar">
       <SidebarItem title="All Protiens" />
+      <SidebarItem title="Profile" />
     </aside>
   );
 };

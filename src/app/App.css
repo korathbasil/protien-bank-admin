@@ -9,6 +9,9 @@ body {
   --col-grey-text: #69647d;
   --col-lightgrey-bg: #f8f8f8;
 
+  /********* Shadows *********/
+  --shadow-light: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
   font-family: "Roboto", sans-serif;
 
   background-color: var(--col-lightgrey-bg);
