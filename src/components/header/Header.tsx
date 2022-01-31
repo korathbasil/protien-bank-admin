@@ -1,17 +1,17 @@
 import { Container, Avatar, Box } from "@material-ui/core";
-import styles from "./header.module.scss";
+import "./header.css";
 
 export const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className="header">
       <Container>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box sx={{ display: "flex", alignItems: "baseline" }}>
-            <h1>ChemWi</h1>
+            <h1 className="header__name">Protien Bank</h1>
             <h3>Admin Panel</h3>
           </Box>
 
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <Box
               sx={{
                 display: "flex",
@@ -19,8 +19,8 @@ export const Header = () => {
                 alignItems: "flex-end",
               }}
             >
-              <h3>Jacob Andrew</h3>
-              <p>Admin</p>
+              <h4>Jacob Andrew</h4>
+              <p style={{ fontSize: "12px" }}>Admin</p>
             </Box>
             <Box sx={{ marginLeft: "10px" }}>
               <Avatar />
