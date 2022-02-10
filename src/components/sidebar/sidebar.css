@@ -8,4 +8,11 @@
 .sidebar__item {
   width: 100%;
   padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.sidebar__itemSelected {
+  background-color: white;
+  color: var(--col-primary);
+  box-shadow: var(--shadow-light);
 }

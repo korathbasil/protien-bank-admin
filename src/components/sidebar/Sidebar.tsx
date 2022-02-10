@@ -1,22 +1,52 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./sidebar.css";
 
 export const Sidebar = () => {
+  const [activeRoute, setActiveRoute] = useState("/");
+
   return (
     <aside className="sidebar">
-      <SidebarItem title="All Protiens" />
-      <SidebarItem title="Profile" />
+      <SidebarItem
+        title="All Protiens"
+        link="/"
+        route={activeRoute}
+        clickHandler={setActiveRoute}
+      />
+      <SidebarItem
+        title="Profile"
+        link="/profile"
+        route={activeRoute}
+        clickHandler={setActiveRoute}
+      />
     </aside>
   );
 };
 
-interface ISidebarProps {
+interface ISidebarItemProps {
   title: string;
+  link: string;
+  route: string;
+  clickHandler: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const SidebarItem: React.FC<ISidebarProps> = ({ title }) => {
+const SidebarItem: React.FC<ISidebarItemProps> = ({
+  title,
+  link,
+  route,
+  clickHandler,
+}) => {
   return (
-    <div className="sidebar__item">
-      <h4>{title}</h4>
-    </div>
+    <Link to={link}>
+      <div
+        className={`sidebar__item ${
+          route === link ? "sidebar__itemSelected" : null
+        }`}
+        onClick={() => clickHandler(link)}
+      >
+        <h4>{title}</h4>
+      </div>
+    </Link>
   );
 };

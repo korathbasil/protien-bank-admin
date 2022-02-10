@@ -16,6 +16,10 @@ body {
 
   background-color: var(--col-lightgrey-bg);
 }
+a {
+  color: var(--col-grey-text);
+  text-decoration: none;
+}
 .conatiner {
   max-width: 1200px;
   margin: 0 auto;
