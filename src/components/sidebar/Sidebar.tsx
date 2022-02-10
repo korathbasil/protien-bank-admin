@@ -1,10 +1,15 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import "./sidebar.css";
 
 export const Sidebar = () => {
   const [activeRoute, setActiveRoute] = useState("/");
+  const location = useLocation();
+
+  useEffect(() => {
+    setActiveRoute(location.pathname);
+  }, [location]);
 
   return (
     <aside className="sidebar">
