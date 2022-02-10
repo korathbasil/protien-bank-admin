@@ -5,7 +5,13 @@ export const Header = () => {
   return (
     <header className="header">
       <Container>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <Box sx={{ display: "flex", alignItems: "baseline" }}>
             <h1 className="header__name">Protien Bank</h1>
             <h3>Admin Panel</h3>
